@@ -14,7 +14,7 @@ function App() {
           <Route index element={<HomePage />} />
           <Route path="/search" element={<SearchPage />} />
           <Route path="/activity" element={<ActivityPage />} />
-          <Route path="/@:username" element={<ProfilePage />} />
+          <Route path="/:username" element={<ProfilePage />} />
           <Route path="/:username/post/:id" element={<PostDetailPage />} />
         </Route>
       </Routes>

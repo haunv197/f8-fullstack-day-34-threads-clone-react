@@ -40,7 +40,11 @@ const HomePage = () => {
           !!posts.length &&
           posts.map((post) => {
             return (
-              <NavLink key={post.id} to={`/${post.username}/post/${post.id}`}>
+              <NavLink
+                key={post.id}
+                to={`/${post.username}/post/${post.id}`}
+                className="flex border-t border-gray-300 nth-1:border-t-0"
+              >
                 <PostItem post={post} />
               </NavLink>
             );

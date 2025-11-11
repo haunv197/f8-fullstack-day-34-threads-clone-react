@@ -1,10 +1,19 @@
+import { useState } from "react";
+import CommentModal from "./CommentModal";
 import { Button } from "./ui/button";
 
 const ButtonsAction = (props) => {
+  const [openComment, setOpenComment] = useState(false);
   const { likeNumber, commentNumber, rePostNumber, shareNumber } =
     props.metrics;
+
+  const showCommentModal = () => {
+    setOpenComment(true);
+  };
+
   return (
     <>
+      <CommentModal open={openComment} onOpenChange={setOpenComment} />
       <div className="mt-1.5 flex gap-1">
         <Button
           variant="outline"
@@ -27,6 +36,7 @@ const ButtonsAction = (props) => {
         </Button>
 
         <Button
+          onClick={showCommentModal}
           variant="outline"
           title="Thích"
           className="h-9 cursor-pointer rounded-full border-0 px-3 font-normal shadow-none hover:bg-[#f5f5f5]"
@@ -44,7 +54,7 @@ const ButtonsAction = (props) => {
 
         <Button
           variant="outline"
-          title="Thích"
+          title="Đăng lại"
           className="h-9 cursor-pointer rounded-full border-0 px-3 font-normal shadow-none hover:bg-[#f5f5f5]"
         >
           <span>

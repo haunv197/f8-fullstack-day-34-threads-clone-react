@@ -40,6 +40,10 @@
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
 }
+@theme {
+  --font-size-default: 0.625rem; 
+  --text-s-default: calc(var(--font-size-default) * 1.5);
+}
 
 :root {
   --radius: 0.625rem;
@@ -114,7 +118,11 @@
   * {
     @apply border-border outline-ring/50;
   }
+
+  
+  
   body {
     @apply bg-background text-foreground;
+    font-size: calc(var(--font-size-default) * 1.5);
   }
 }

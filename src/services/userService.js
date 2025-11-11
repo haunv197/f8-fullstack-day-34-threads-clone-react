@@ -1,8 +1,8 @@
 import axiosClient from "../api/axiosClient";
 
 const userService = {
-  getProfile() {
-    return axiosClient.get("user");
+  getUserInfo(username) {
+    return axiosClient.get(`users/${username}`);
   },
 };
 

@@ -1,6 +1,5 @@
 import ButtonsAction from "./ButtonsAction";
 import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
-import { Button } from "./ui/button";
 
 const CommentItem = (comments) => {
   const { avatar, body, name, id, metrics, timeAgo, userId, username } =

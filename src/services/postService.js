@@ -8,6 +8,10 @@ const postService = {
     if (!id) return;
     return axiosClient.get(`posts/${id}`);
   },
+  getPostsByUserId(userId) {
+    if (!userId) return;
+    return axiosClient.get(`users/${userId}/posts`);
+  },
 };
 
 export default postService;
