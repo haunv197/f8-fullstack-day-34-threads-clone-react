@@ -17,7 +17,7 @@ const PostItem = (props) => {
   } = props.post;
 
   return (
-    <div className="block border-t border-gray-300 px-6 py-3 nth-1:border-t-0">
+    <div className="block border-t border-gray-300 p-3 nth-1:border-t-0 md:px-6">
       <div className="flex gap-3">
         {/* avatar */}
         <Avatar className="h-9 w-9">

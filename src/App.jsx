@@ -1,10 +1,10 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router";
-import DefaultLayout from "./components/DefaultLayout";
 import HomePage from "./pages/Homepage";
 import SearchPage from "./pages/SearchPage";
 import ActivityPage from "./pages/ActivityPage";
 import ProfilePage from "./pages/ProfilePage";
 import PostDetailPage from "./pages/PostDetailPage";
+import DefaultLayout from "./layout/DefaultLayout";
 
 function App() {
   return (

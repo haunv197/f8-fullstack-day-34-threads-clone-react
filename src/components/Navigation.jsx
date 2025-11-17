@@ -3,8 +3,9 @@ import { navigationRoutes } from "../constants/routes";
 
 const Navigation = () => {
   return (
-    <nav className="flex h-full flex-col items-center justify-between">
-      <NavLink to="/">
+    <nav className="fixed top-0 left-0 z-50 flex h-(--header-mobile) w-full items-center justify-between bg-white px-6 md:relative md:h-full md:flex-col md:bg-transparent md:px-0">
+      <div className="md:hidden"></div>
+      <NavLink to="/" className="py-4">
         <span>
           <svg
             className="w-8.5"
@@ -19,9 +20,9 @@ const Navigation = () => {
         </span>
       </NavLink>
 
-      <ul className="flex flex-col gap-2.5">
+      <ul className="fixed bottom-0 left-0 z-50 flex h-12.5 w-full items-center gap-2.5 bg-gray-50 md:relative md:h-auto md:flex-col">
         {navigationRoutes.map((route, index) => (
-          <li key={index}>
+          <li key={index} className="flex-1">
             {route.path === "#" ? (
               <button
                 title={route.name}
@@ -45,7 +46,7 @@ const Navigation = () => {
 
       <button
         title="Xem thêm"
-        className="inline-flex cursor-pointer justify-center"
+        className="inline-flex cursor-pointer justify-center md:mb-5.5"
       >
         <svg
           className="h-full w-6 fill-[#b8b8b8] hover:fill-[black]"

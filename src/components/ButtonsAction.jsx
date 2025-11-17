@@ -10,11 +10,14 @@ const ButtonsAction = (props) => {
   const showCommentModal = () => {
     setOpenComment(true);
   };
+  const handleButton = (e) => {
+    e.preventDefault();
+  };
 
   return (
     <>
       <CommentModal open={openComment} onOpenChange={setOpenComment} />
-      <div className="mt-1.5 flex gap-1">
+      <div className="mt-1.5 flex gap-1" onClick={handleButton}>
         <Button
           variant="outline"
           title="Thích"
@@ -68,7 +71,7 @@ const ButtonsAction = (props) => {
 
         <Button
           variant="outline"
-          title="Thích"
+          title="Tài khoản"
           className="h-9 cursor-pointer rounded-full border-0 px-3 font-normal shadow-none hover:bg-[#f5f5f5]"
         >
           <span>

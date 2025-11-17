@@ -41,8 +41,11 @@
   --color-sidebar-ring: var(--sidebar-ring);
 }
 @theme {
-  --font-size-default: 0.625rem; 
+  --navigation-width: 76px;
+  --font-size-default: 0.625rem;
   --text-s-default: calc(var(--font-size-default) * 1.5);
+  --width-main: calc(100% - 1.5 * var(--navigation-width));
+  --header-mobile: 60px;
 }
 
 :root {
@@ -119,8 +122,6 @@
     @apply border-border outline-ring/50;
   }
 
-  
-  
   body {
     @apply bg-background text-foreground;
     font-size: calc(var(--font-size-default) * 1.5);
