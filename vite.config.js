@@ -19,5 +19,5 @@ export default defineConfig({
       "@": path.resolve(__dirname, "src"),
     },
   },
-  base: "/",
+  base: "/f8-fullstack-day-34-threads-clone-react",
 });
