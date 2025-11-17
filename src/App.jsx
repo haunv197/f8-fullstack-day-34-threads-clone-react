@@ -5,6 +5,8 @@ import ActivityPage from "./pages/ActivityPage";
 import ProfilePage from "./pages/ProfilePage";
 import PostDetailPage from "./pages/PostDetailPage";
 import DefaultLayout from "./layout/DefaultLayout";
+import FollowingPage from "./pages/FollowingPage";
+import GhostPostsPage from "./pages/GhostPostsPage";
 
 function App() {
   return (
@@ -15,6 +17,8 @@ function App() {
           <Route path="/search" element={<SearchPage />} />
           <Route path="/activity" element={<ActivityPage />} />
           <Route path="/:username" element={<ProfilePage />} />
+          <Route path="/following" element={<FollowingPage />} />
+          <Route path="/ghost-posts" element={<GhostPostsPage />} />
           <Route path="/:username/post/:id" element={<PostDetailPage />} />
         </Route>
       </Routes>
